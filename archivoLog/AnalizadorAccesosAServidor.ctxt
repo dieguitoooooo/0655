@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=AnalizadorAccesosAServidor
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ AnalizadorAccesosAServidor\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ AnalizadorAccesosAServidor\ here.\r\n\ \r\n\ @author\ (Diego\ Antonio\ Almonte)\ \r\n\ @version\ (a\ version\ number\ or\ 27.02.2018)\r\n
 comment1.params=
 comment1.target=AnalizadorAccesosAServidor()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ AnalizadorAccesosAServidor\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=nombreArchivo
+comment2.target=void\ analizarArchivoDeLog(java.lang.String)
+comment2.text=\r\n\ Metodo\ que\ informa\ del\ nombe\ del\ log\ a\ leer.\r\n\ Lee\ el\ archivo\ log\ y\ lo\ analiza.\r\n\ @param\ \ Intoduce\ el\ nombre\ de\ el\ archivo\ log\r\n\ @return\ \ \ \ \ no\ devuelve\ nada\r\n
 numComments=3

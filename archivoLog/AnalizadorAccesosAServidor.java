@@ -1,14 +1,18 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 /**
  * Write a description of class AnalizadorAccesosAServidor here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Diego Antonio Almonte) 
+ * @version (a version number or 27.02.2018)
  */
 public class AnalizadorAccesosAServidor
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // creamos un array list de objetos acceso
+    private  ArrayList<Acceso> archivoLog;
 
     /**
      * Constructor for objects of class AnalizadorAccesosAServidor
@@ -16,18 +20,30 @@ public class AnalizadorAccesosAServidor
     public AnalizadorAccesosAServidor()
     {
         // initialise instance variables
-        x = 0;
+        archivoLog = new ArrayList<>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Metodo que informa del nombe del log a leer.
+     * Lee el archivo log y lo analiza.
+     * @param  Intoduce el nombre de el archivo log
+     * @return     no devuelve nada
      */
-    public int sampleMethod(int y)
+    public void analizarArchivoDeLog(String nombreArchivo)
     {
-        // put your code here
-        return x + y;
+        try{
+            File log = new File(nombreArchivo + ".log");
+            Scanner sc = new Scanner(log);
+            while (sc.hasNextLine()) {
+                String linea = sc.nextLine();
+                String[] arrayDeString = linea.split(" ");
+                archivoLog.add(new Acceso (Integer.parseInt(arrayDeString[0]),Integer.parseInt(arrayDeString[1]),Integer.parseInt(arrayDeString[2]),Integer.parseInt(arrayDeString[3]),Integer.parseInt(arrayDeString[4])));
+            }
+            sc.close();
+        }
+
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
     }
 }
