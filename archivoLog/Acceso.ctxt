@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Acceso
+comment0.text=\r\n\ Esta\ clase\ representa\ un\ \u00FAnico\ acceso\ al\ servidor.\r\n\ \r\n\ @author\ (Diego\ Antonio\ Almonte\ Zarzuela)\ \r\n\ @version\ (a\ version\ number\ or\ 27.02.2018)\r\n
+comment1.params=dia\ mes\ anno\ hora\ minutos
+comment1.target=Acceso(int,\ int,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Acceso\r\n\ @param\ devuelve\ el\ dia,\ mes,\ anno,\ hora\ y\ minutos\ cuando\ accedemos.\ \r\n
+comment2.params=
+comment2.target=int\ getHora()
+comment2.text=\r\n\ Este\ metodo\ devuelve\ la\ hora\r\n\ @param\ no\ hay\r\n\ @return\ \ \ \ \ devuelve\ la\ hora\ \r\n
+numComments=3
