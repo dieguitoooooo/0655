@@ -31,8 +31,9 @@ public class AnalizadorAccesosAServidor
      */
     public void analizarArchivoDeLog(String nombreArchivo)
     {
+        archivoLog.clear();
         try{
-            File log = new File(nombreArchivo + ".log");
+            File log = new File(nombreArchivo);
             Scanner sc = new Scanner(log);
             while (sc.hasNextLine()) {
                 String linea = sc.nextLine();
@@ -45,5 +46,35 @@ public class AnalizadorAccesosAServidor
         catch (FileNotFoundException e){
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Devuelve la hora con mas accesos.
+     * @return devuelve la hora con mas accesos.
+     */
+    public int obtenerHoraMasAccesos()
+    {
+        int numeroAccesosMaximoEncontradosHastaAhoraParaUnaHora = 0;
+        int horaConElNumeroDeAccesosMaximo = -1;
+
+        if(archivoLog.size() >0){
+            for(int horaActual=0; horaActual < 24; horaActual++){
+                int totalDeAccesosParaHoraActual = 0;
+                //Miramos todos los accesos
+                for(Acceso acceso :archivoLog){
+                    if(horaActual == acceso.getHora()){
+                        totalDeAccesosParaHoraActual++;
+                    }
+                }
+                if(numeroAccesosMaximoEncontradosHastaAhoraParaUnaHora<=totalDeAccesosParaHoraActual){
+                    numeroAccesosMaximoEncontradosHastaAhoraParaUnaHora =totalDeAccesosParaHoraActual;
+                    horaConElNumeroDeAccesosMaximo = horaActual;
+                }
+            }
+        }
+        else{
+            System.out.println("No hay datos");
+        }
+        return horaConElNumeroDeAccesosMaximo;
     }
 }

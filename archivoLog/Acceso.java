@@ -18,7 +18,7 @@ public class Acceso
      * Constructor de la clase Acceso
      * @param devuelve el dia, mes, anno, hora y minutos cuando accedemos. 
      */
-    public Acceso(int dia, int mes, int anno, int hora, int minutos)
+    public Acceso(int anno, int mes, int dia, int hora, int minutos)
     {
         // inicializacion de las variables
         this.dia = dia;
